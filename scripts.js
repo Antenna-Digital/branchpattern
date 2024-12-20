@@ -2121,7 +2121,7 @@ function imageSrcSetFix() {
     image.dataset.sized = "true";
 
     // Optional: Log for debugging
-    console.log(`Image size set to: ${finalSizeValue}`);
+    // console.log(`Image size set to: ${finalSizeValue}`);
   }
 
   // Debounce function to limit function calls during resize
