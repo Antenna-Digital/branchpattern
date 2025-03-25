@@ -1770,16 +1770,18 @@ const finsweetInit = () => {
         // The callback passes a `listInstances` array with all the `CMSList` instances on the page.
         const [listInstance] = listInstances;
 
-        // The `renderitems` event runs whenever the list renders items after switching pages.
-        listInstance.on("renderitems", (renderedItems) => {
-          // console.log("%c cmsSort rendered", "color: violet;");
-          // console.table("cmsSort", renderedItems);
-          imageAnimationDebounced();
-          fadeInElementsAnimationDebounced();
-        });
-        setTimeout(function () {
-          listInstance.renderItems(true, true);
-        }, 250);
+        if (listInstance) {
+          // The `renderitems` event runs whenever the list renders items after switching pages.
+          listInstance.on("renderitems", (renderedItems) => {
+            // console.log("%c cmsSort rendered", "color: violet;");
+            // console.table("cmsSort", renderedItems);
+            imageAnimationDebounced();
+            fadeInElementsAnimationDebounced();
+          });
+          setTimeout(function () {
+            listInstance.renderItems(true, true);
+          }, 250);
+        }
       },
     ]);
   }
