@@ -268,9 +268,9 @@ const initBarba = () => {
     });
   }
 }; // end barba init
-setTimeout(function () {
-  initBarba();
-}, 1000); // delay init for editor view
+// setTimeout(function () {
+//   initBarba();
+// }, 1000); // delay init for editor view
 
 let lenis;
 
@@ -464,7 +464,7 @@ const imageAnimation = (delay) => {
   // console.table("end", ScrollTrigger.getAll());
   // console.log("%c imageAnimation is done running", "color: yellow;");
 }; // end image animation setup
-const imageAnimationDebounced = debounce(imageAnimation, 500);
+const imageAnimationDebounced = debounce(imageAnimation, 100);
 // end image animation functions
 
 /*
@@ -560,7 +560,7 @@ const fadeInElementsAnimation = () => {
 
   // console.log("%c fadeInElementsAnimation is done running", "color: yellow;");
 }; // end fade in elements animation
-const fadeInElementsAnimationDebounced = debounce(fadeInElementsAnimation, 500);
+const fadeInElementsAnimationDebounced = debounce(fadeInElementsAnimation, 100);
 // end fade in elements animation functions
 
 // Dynamic Image Animation setup
@@ -649,7 +649,7 @@ const dynamicImageAnimation = (delay) => {
   // console.table("end", ScrollTrigger.getAll());
   // console.log("%c dynamicImageAnimation is done running", "color: yellow;");
 }; // end dynamic image animation setup
-const dynamicImageAnimationDebounced = debounce(dynamicImageAnimation, 500);
+const dynamicImageAnimationDebounced = debounce(dynamicImageAnimation, 100);
 // end dynamic image animation functions
 
 /*
@@ -752,7 +752,7 @@ const fadeInDynamicElementsAnimation = () => {
 }; // end fade in dynamic elements animation
 const fadeInDynamicElementsAnimationDebounced = debounce(
   fadeInDynamicElementsAnimation,
-  500
+  100
 );
 // end fade in dynamic elements animation functions
 
@@ -1437,7 +1437,7 @@ const refreshAnimations = () => {
   // console.log("%c Animations refreshed", "color: yellow;");
 }; // end refreshAnimations
 // Debounced version of refreshAnimations
-const refreshAnimationsDebounced = debounce(refreshAnimations, 500);
+const refreshAnimationsDebounced = debounce(refreshAnimations, 100);
 // end refresh animations functions
 
 // Re-run the function after loading dynamic content
@@ -1459,7 +1459,7 @@ const refreshDynamicAnimations = () => {
 // Debounced version of refreshDynamicAnimations
 const refreshDynamicAnimationsDebounced = debounce(
   refreshDynamicAnimations,
-  500
+  100
 );
 // end refresh dynamic animations functions
 
