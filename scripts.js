@@ -2347,9 +2347,9 @@ const init = () => {
     
     // hide the announcement bar when the menu is open because it pushes things down too far
     if (isOpen) {
-      //announcementBanner.addClass("hide-me");
+      announcementBanner.addClass("hide-me");
     } else {
-      //announcementBanner.removeClass("hide-me");
+      // announcementBanner.removeClass("hide-me");
     }
 
     const animateLogo = gsap.to(heroLogo, {
