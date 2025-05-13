@@ -2336,10 +2336,17 @@ const init = () => {
   let initialLogoColor = false;
   $(".menu-button.w-nav-button").on("click", function () {
     let heroLogo = $(this).siblings(".brand-logo");
+    let announcementBanner = $('.announcement-bar');
     let isOpen = $(this).hasClass("w--open"); // Fixed the class name for checking the open state
     if (!isOpen) {
       let compStyles = getComputedStyle(heroLogo[0]);
       initialLogoColor = compStyles.getPropertyValue("color");
+    }
+    // hide the announcement bar when the menu is open because it pushes things down too far
+    if (isOpen) {
+      announcementBanner.addClass("hide-me");
+    } else {
+      announcementBanner.removeClass("hide-me");
     }
 
     const animateLogo = gsap.to(heroLogo, {
