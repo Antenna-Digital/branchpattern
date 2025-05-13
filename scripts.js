@@ -2346,7 +2346,7 @@ const init = () => {
     }
     
     // hide the announcement bar when the menu is open because it pushes things down too far
-    if (isOpen) {
+    if (!isOpen) {
       announcementBanner.addClass("hide-me");
     } else {
       // announcementBanner.removeClass("hide-me");
