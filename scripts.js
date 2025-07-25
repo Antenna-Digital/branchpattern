@@ -953,6 +953,7 @@ const googleMapsSetup = () => {
         streetViewControl: false,
         rotateControl: false,
         fullscreenControl: false,
+        disableDefaultUI: true,
       });
 
       originalCenter = locationsMap.getCenter(); // Store the original center
