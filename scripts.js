@@ -381,6 +381,13 @@ const imageAnimation = (delay) => {
   }
   if (document.querySelector(".image-container:not(.dynamic)") != null) {
     if (window.innerWidth > 500) {
+      // Set disabled animations to visible state
+      gsap.set(".image-container:not(.dynamic)[data-image-anim='disable']", { 
+        opacity: 1 
+      });
+      gsap.set(".image-container:not(.dynamic)[data-image-anim='disable'] .image-cover", { 
+        yPercent: -101 
+      });
       // ChatGPT Solution
       let animationIndex = 0; // Initialize the animation index variable
       let resetTimeout; // Initialize a variable to hold the reset timeout
@@ -403,7 +410,7 @@ const imageAnimation = (delay) => {
         });
       }
       const imageContainers = gsap.utils.toArray(
-        ".image-container:not(.dynamic):not(.animation-complete)"
+        ".image-container:not(.dynamic):not(.animation-complete):not([data-image-anim='disable'])"
       );
       imageContainers.forEach((imageContainer, index) => {
         // console.log($(imageContainer));
@@ -572,6 +579,13 @@ const dynamicImageAnimation = (delay) => {
   }
   if (document.querySelector(".image-container.dynamic") != null) {
     if (window.innerWidth > 500) {
+      // Set disabled animations to visible state
+      gsap.set(".image-container.dynamic[data-image-anim='disable']", { 
+        opacity: 1 
+      });
+      gsap.set(".image-container.dynamic[data-image-anim='disable'] .image-cover", { 
+        yPercent: -101 
+      });
       // ChatGPT Solution
       let animationIndex = 0; // Initialize the animation index variable
       let resetTimeout; // Initialize a variable to hold the reset timeout
@@ -592,7 +606,7 @@ const dynamicImageAnimation = (delay) => {
         });
       }
       const imageContainers = gsap.utils.toArray(
-        ".image-container.dynamic:not(.animation-complete)"
+        ".image-container.dynamic:not(.animation-complete):not([data-image-anim='disable'])"
       );
       imageContainers.forEach((imageContainer, index) => {
         // console.log($(imageContainer));
